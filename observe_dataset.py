@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from .utils import load_dataset, im_convert
+from utils import load_dataset, im_convert
 
 # data path
 path = 'ants_and_bees'
@@ -19,3 +19,5 @@ for idx in np.arange(20):
   ax = fig.add_subplot(2, 10, idx+1, xticks=[], yticks=[])
   plt.imshow(im_convert(images[idx]))
   ax.set_title(classes[labels[idx].item()])
+
+plt.show()
