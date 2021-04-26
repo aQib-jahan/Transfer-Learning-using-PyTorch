@@ -32,4 +32,3 @@ for idx in np.arange(20):
   ax.set_title("{} ({})".format(str(classes[preds[idx].item()]), str(classes[labels[idx].item()])), color=("green" if preds[idx]==labels[idx] else "red"))
 
 plt.show()
-

@@ -29,16 +29,17 @@ last_layer = nn.Linear(n_inputs, len(classes))
 model.classifier[6] = last_layer
 
 model.to(device)
+# to check the output of the last layer
 #print(model.classifier[6].out_features)
 
-# loss
+# loss function
 criterion = nn.CrossEntropyLoss()
 
 # optimizer
 optimizer = torch.optim.Adam(model.parameters(), lr = 0.0001)
 
 # training
-epochs = 5
+epochs = 25
 running_loss_history = []
 running_corrects_history = []
 val_running_loss_history = []
@@ -105,6 +106,6 @@ np.save('val_running_corrects_history.npy', val_running_corrects_history)
 print("History Saved...")
 
 # save model
-model_path = 'D:/Models/model'
+model_path = 'D:/Models/model' #the path where the model will be saved
 torch.save(model, model_path)
 print("Model Saved...")

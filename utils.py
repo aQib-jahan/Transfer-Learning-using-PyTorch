@@ -3,7 +3,6 @@ import numpy as np
 from torchvision import datasets, transforms
 
 def load_dataset(path):
-
     # augmentation
     transform_train = transforms.Compose([transforms.Resize((224, 224)),
                                           transforms.RandomHorizontalFlip(),
